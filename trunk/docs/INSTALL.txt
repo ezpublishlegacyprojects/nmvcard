@@ -1,0 +1,11 @@
+Tested on eZ Publish 4.0.0
+
+1. Upload and activate extension.
+
+2. Copy settings/vcard_default.ini.append.php to settings/vcard.ini.append.php and modify the settings.
+
+3. Grant access to the vcard module for the roles that should be able to download vCards.
+
+4. Add, to the line/full view of the node templates where you want a vCard download link to be included:
+
+<a href={concat('vcard/download/', $node.node_id)|ezurl}>Download vCard</a>
